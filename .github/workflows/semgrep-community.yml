@@ -4,6 +4,7 @@ name: Semgrep Community Edition
 on:
   push:
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
   schedule:
     - cron: "41 8 * * 1"
   workflow_dispatch:
