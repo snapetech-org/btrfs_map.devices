@@ -39,6 +39,7 @@ jobs:
         run: |
           jq -r '"Semgrep CE reported \(.results | length) finding(s). Review semgrep.sarif and the scan log."' semgrep.json
 
+      # Keep reports within the repository run; do not publish fork PR scan output.
       - name: Retain scan report (semgrep)
         if: >-
           always() &&
